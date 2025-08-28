@@ -6,11 +6,11 @@ public class VexStorageBox {
     private Double weight; // pounds
     private String[] contents;
 
-    public VexStorageBox() {
+    public VexStorageBox(int maxCapacity) {
         this.contents = new String[0];
         capacity = 0;
         weight = 1.5;
-        SIZE = 5;
+        SIZE = maxCapacity;
     }
 
     public void inspectContents() {
