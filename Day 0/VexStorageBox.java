@@ -1,19 +1,23 @@
 import java.util.Map;
-
+import java.util.Arrays;
 public class VexStorageBox {
     private static String SIZE;
     private String capacity;
     private Double weight; // pounds
-    private final Map<String, Double> contents;
+    private String[] contents;
 
     public VexStorageBox() {
-        contents = Map.of(
-            "Ethernet Cable 1", 1.0,
-            "Ethernet Cable 2", 2.0,
-            "Ethernet Cable 3", 3.0
-        );
+        this.contents = null;
         capacity = "Empty";
         weight = 1.5;
         SIZE = "Small";
+    }
+
+    public void inspectContents() {
+        System.out.println(this.contents);
+    }
+
+    public void trashContents() {
+    this.contents = new String[0];
     }
 }
