@@ -1,24 +1,17 @@
-import java.util.HashMap;
 import java.util.Map;
 
 public class VexStorageBox {
-    public final String size = "Small";
+    public static final String SIZE = "Small";
     public String capacity = "Full";
-    public float weight = 1.5f; //pounds
-    /*
-    public String[] contents = {
-        "Ethernet Cable 1", 
-        "Ethernet Cable 2", 
-        "Ethernet Cable 3"
-    };
-    */
-    public Map<String, String> contents;
+    public float weight = 1.5f; // pounds
+
+    public final Map<String, Float> contents;
 
     public VexStorageBox() {
-        this.contents = new HashMap();
-    }
-
-    public void openBox() {
-        System.out.println("Opening the Vex Storage Box...");
+        contents = Map.of(
+            "Ethernet Cable 1", 1f,
+            "Ethernet Cable 2", 2f,
+            "Ethernet Cable 3", 3f
+        );
     }
 }
